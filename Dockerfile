@@ -1,7 +1,6 @@
-ARG ALPINE_VERSION
+ARG ALPINE_VERSION=3.17
 FROM alpine:${ALPINE_VERSION}
 
-# instalando dependências no SO
-RUN apk add --no-cache nodejs && \
-    apk add --no-cache npm    && \
-    apk add --no-cache git
+# Serviço: Imprimir um texto no terminal
+ENTRYPOINT ["echo", " Texto exibido via ENTRYPOINT do DOCKER", "\n"]
+CMD ["Texto exibido via CMD do DOCKER"]
