@@ -26,3 +26,6 @@ RUN tar xvzf server.tar.gz \
 
 ENTRYPOINT [ "node" ]
 CMD [ "server.js" ]
+
+EXPOSE 3000/tcp
+EXPOSE 3000/udp
